@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="dc.js-develop/dc.js-develop/web/css/dc.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="leaflet.css">
+<link rel="stylesheet" type="text/css" href="css/leaflet.markercluster.css">
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />
+<!-- <link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" /> -->
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="http://www.actionagainsthunger.org.uk/"><img id="logo" src="logo.svg"></a>
+  </div>
+</header>
+<div class="container">
+  <h2>Programme Name</h2>
+<p>Explore the activities (by indicator) of the [Programme Name].
+</br>Filter by zooming in and out on the map, as well as by clicking on the different Agencies, Sectors and Regions in the bar charts.
+    </br>Click the Reset All button to reset all filters.</br></br>
+      <p>
+      Link: <a href="[put link in here]"> Click here </a>.
+
+<a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset All</a></p></p>
+
+  <div class="row" >
+                <div  class="col-lg-6 col-md-12 col-sm-12 col-xs-12" id="map">
+                    <h4>Activity Locations</h4><h5>filter by zoom</h5>
+                    <div  class="map" id="map"> </div>
+                </div>
+
+                <div  class="col-lg-2 col-md-12 col-sm-12 col-xs-12"  data-step="7" data-position="left" id="Agency">
+                    <h4>Who</h4><h5>(Who)</h5>
+                    <div  class="Agency" id="Agency"> </div>
+                </div>
+
+                <div  class="col-lg-2 col-md-12 col-sm-12 col-xs-12"  data-step="7" data-position="left" id="Sector">
+                    <h4>What</h4><h5>(What)</h5>
+                    <div  class="Sector" id="Sector"> </div>
+                </div>
+
+                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12"  data-step="7" data-position="left" id="Location">
+                    <h4>Where</h4><h5>(Where)</h5>
+                    <div  class="Location" id="Location"> </div>
+                </div>
+  </div>
+
+    <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-hover" id="dc-data-table">
+                        <thead>
+                          <tr class="header">
+                            <th>Sector</th>
+                            <th>Agency</th>
+                            <th>Country</th>
+                            <th>Region</th>
+                            <th>Output indicator</th>
+                            <th>Target</th>
+                            <th>Achieved</th>
+                          </tr>
+                        </thead>
+                    </table>
+                  </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="d3.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.js'></script>
+<!-- <script src="https://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script> -->
+<script src="topojson.min.js"></script>
+<script src="crossfilter-master/crossfilter-master/crossfilter.min.js"></script>
+<script type="text/javascript" src="js/d3.js"></script>
+<script type="text/javascript" src="js/crossfilter.js"></script>
+<script type="text/javascript" src="js/dc.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/leaflet.markercluster.js"></script>
+<script type="text/javascript" src="js/dc.leaflet.js"></script>
+<script src="script.js"></script>
+</body>
